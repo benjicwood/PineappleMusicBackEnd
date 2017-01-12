@@ -1,0 +1,26 @@
+{
+  "name": "pineapple-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./spec",
+    "precommit": "npm test",
+    "posttest": "npm run lint",
+    "lint": "semistandard --verbose | snazzy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northcoders/PineappleAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/northcoders/PineappleAPI/issues"
+  },
+  "homepage": "https://github.com/northcoders/PineappleAPI#readme",
+  "devDependencies": {
+    "husky": "^0.12.0"
+  }
+}
