@@ -4,8 +4,8 @@ let chai = require('chai');
 let request = require('supertest');
 let expect = chai.expect;
 
-describe('API main route', function () {
-  it('should return version number', function (done) {
+describe('checks API routes', function () {
+  it('/api', function (done) {
     request(server)
       .get('/api')
       .end(function (err, res) {
@@ -16,12 +16,20 @@ describe('API main route', function () {
         }
       });
   });
-});
-
-describe('api/genre', function () {
-  it('OK', function (done) {
+  it('/api/genre', function (done) {
     request(server)
       .get('/api/genre')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
+  it('/api/instrument', function (done) {
+    request(server)
+      .get('/api/instrument')
       .end(function (err, res) {
         if (!err) {
           expect(res.body.status).to.be.ok;
