@@ -31,4 +31,9 @@ router.get('/match/band/:id', function (req, res) {
   );
 });
 
+router.get('/match/musician/:id', function (req, res) {
+  res.status(200).json({status: '/match/musician/:id OK'}
+  );
+});
+
 module.exports = router;
