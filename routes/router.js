@@ -26,4 +26,9 @@ router.get('/profile/musician/:id', function (req, res) {
   );
 });
 
+router.get('/ilike/:id', function (req, res) {
+  res.status(200).json({status: '/ilike/:id OK'}
+  );
+});
+
 module.exports = router;
