@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 let PORT = process.env.PORT || 3000;
 
+const apiRouter = require('./routes/router');
+app.use('/api', apiRouter);
+
 app.get('/', function (req, res) {
   res.status(200).json({status: 'OK'});
 });
