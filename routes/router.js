@@ -11,4 +11,9 @@ router.get('/genre', function (req, res) {
   );
 });
 
+router.get('/instrument', function (req, res) {
+  res.status(200).json({status: '/instrument OK'}
+  );
+});
+
 module.exports = router;
