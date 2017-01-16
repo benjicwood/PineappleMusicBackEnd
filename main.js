@@ -10,11 +10,9 @@ app.get('*', function (req, res) {
   res.redirect('/');
 });
 
-function server () {
-  app.listen(PORT, function (error, result) {
-    if (error) console.log(error);
-    console.log(`Listening on port ${PORT}`);
-  });
-}
+app.listen(PORT, function (error, result) {
+  if (error) console.log(error);
+  console.log(`Listening on port ${PORT}`);
+});
 
-module.exports = server;
+module.exports = app;

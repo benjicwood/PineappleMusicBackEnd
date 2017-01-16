@@ -7,12 +7,10 @@ describe('express', function () {
     request(server)
       .get('/')
       .expect(200, done);
-    done();
   });
   it('redirects to / for unrecognised routes', function testPath (done) {
     request(server)
       .get('/foo/bar')
-      .expect(200, done);
-    done();
+      .expect(302, done);
   });
 });
