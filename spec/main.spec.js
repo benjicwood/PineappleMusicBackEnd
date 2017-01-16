@@ -1,10 +1,18 @@
 /* eslint-env mocha */
-describe('express server', function () {
-  let server;
-  beforeEach(function () {
-    server = require('../main');
+const request = require('supertest');
+const server = require('../main');
+
+describe('express', function () {
+  it('responds to /', function testSlash (done) {
+    request(server)
+      .get('/')
+      .expect(200, done);
+    done();
   });
-  afterEach(function () {
-    server.close();
+  it('redirects to / for unrecognised routes', function testPath (done) {
+    request(server)
+      .get('/foo/bar')
+      .expect(200, done);
+    done();
   });
 });
