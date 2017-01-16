@@ -21,6 +21,11 @@
   },
   "homepage": "https://github.com/northcoders/PineappleAPI#readme",
   "devDependencies": {
-    "husky": "^0.12.0"
+    "husky": "^0.12.0",
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
   }
 }
