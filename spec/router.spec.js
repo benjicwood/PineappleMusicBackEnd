@@ -38,4 +38,15 @@ describe('checks API routes', function () {
         }
       });
   });
+  it('/api/profile/band/:id', function (done) {
+    request(server)
+      .get('/api/profile/band/12345')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
 });
