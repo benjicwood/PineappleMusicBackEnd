@@ -5,7 +5,7 @@ let request = require('supertest');
 let expect = chai.expect;
 
 describe('checks API routes', function () {
-  it('/api', function (done) {
+  it('GET /api', function (done) {
     request(server)
       .get('/api')
       .end(function (err, res) {
@@ -16,7 +16,7 @@ describe('checks API routes', function () {
         }
       });
   });
-  it('/api/genre', function (done) {
+  it('GET /api/genre', function (done) {
     request(server)
       .get('/api/genre')
       .end(function (err, res) {
@@ -27,7 +27,7 @@ describe('checks API routes', function () {
         }
       });
   });
-  it('/api/instrument', function (done) {
+  it('GET /api/instrument', function (done) {
     request(server)
       .get('/api/instrument')
       .end(function (err, res) {
@@ -38,7 +38,7 @@ describe('checks API routes', function () {
         }
       });
   });
-  it('/api/profile/band/:id', function (done) {
+  it('GET /api/profile/band/:id', function (done) {
     request(server)
       .get('/api/profile/band/12345')
       .end(function (err, res) {
@@ -49,9 +49,20 @@ describe('checks API routes', function () {
         }
       });
   });
-  it('/api/profile/musician/:id', function (done) {
+  it('GET /api/profile/musician/:id', function (done) {
     request(server)
       .get('/api/profile/musician/12345')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
+  it('POST /api/profile/musician', function (done) {
+    request(server)
+      .post('/api/profile/musician')
       .end(function (err, res) {
         if (!err) {
           expect(res.body.status).to.be.ok;

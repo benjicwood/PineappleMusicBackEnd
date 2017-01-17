@@ -26,4 +26,9 @@ router.get('/profile/musician/:id', function (req, res) {
   );
 });
 
+router.post('/profile/musician', function (req, res) {
+  res.status(200).json({status: 'POST /profile/musician OK'}
+  );
+});
+
 module.exports = router;
