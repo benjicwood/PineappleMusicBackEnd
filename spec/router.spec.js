@@ -60,6 +60,11 @@ describe('checks API routes', function () {
         }
       });
   });
+
+  it('POST /api/profile/band', function (done) {
+    request(server)
+      .post('/api/profile/band')
+
   it('POST /api/profile/musician', function (done) {
     request(server)
       .post('/api/profile/musician')
