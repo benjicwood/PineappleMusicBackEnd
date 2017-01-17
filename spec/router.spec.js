@@ -60,4 +60,15 @@ describe('checks API routes', function () {
         }
       });
   });
+  it('POST /api/profile/band', function (done) {
+    request(server)
+      .post('/api/profile/band')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
 });
