@@ -30,6 +30,10 @@ router.get('/ilike/:id', function (req, res) {
   res.status(200).json({status: '/ilike/:id OK'}
   );
 });
+router.get('/likesme/:id', function (req, res) {
+  res.status(200).json({status: '/likesme/:id OK'}
+  );
+});
 router.get('/match/musician/:id', function (req, res) {
   res.status(200).json({status: '/match/musician/:id OK'}
   );

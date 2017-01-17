@@ -71,6 +71,28 @@ describe('checks API routes', function () {
         }
       });
   });
+  it('GET /api/likesme/:id', function (done) {
+    request(server)
+      .get('/api/likesme/12345')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
+  it('GET /api/match/musician/:id', function (done) {
+    request(server)
+      .get('/api/match/musician/12345')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
   it('GET /api/match/band/:id', function (done) {
     request(server)
       .get('/api/match/band/12345')
