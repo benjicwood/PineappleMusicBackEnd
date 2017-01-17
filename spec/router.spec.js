@@ -60,9 +60,15 @@ describe('checks API routes', function () {
         }
       });
   });
+
   it('/api/ilike/:id', function (done) {
     request(server)
       .get('/api/ilike/12345')
+
+  it('/api/match/band/:id', function (done) {
+    request(server)
+      .get('/api/match/band/12345')
+
       .end(function (err, res) {
         if (!err) {
           expect(res.body.status).to.be.ok;
