@@ -60,22 +60,42 @@ describe('checks API routes', function () {
         }
       });
   });
-
+  it('GET /api/ilike/:id', function (done) {
+    request(server)
+      .get('/api/ilike/12345')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
+  it('GET /api/match/band/:id', function (done) {
+    request(server)
+      .get('/api/match/band/12345')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
   it('POST /api/profile/band', function (done) {
     request(server)
       .post('/api/profile/band')
-
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
   it('POST /api/profile/musician', function (done) {
     request(server)
       .post('/api/profile/musician')
-
-  it('/api/ilike/:id', function (done) {
-    request(server)
-      .get('/api/ilike/12345')
-
-  it('/api/match/band/:id', function (done) {
-    request(server)
-      .get('/api/match/band/12345')
       .end(function (err, res) {
         if (!err) {
           expect(res.body.status).to.be.ok;
