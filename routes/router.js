@@ -56,6 +56,16 @@ router.post('/profile/musician', function (req, res) {
   );
 });
 
+router.post('/profile/band/:id', function (req, res) {
+  res.status(200).json({status: 'POST /profile/band/:id OK'}
+  );
+});
+
+router.post('/profile/musician/:id', function (req, res) {
+  res.status(200).json({status: 'POST /profile/musician/:id OK'}
+  );
+});
+
 router.post('/connections', function (req, res) {
   res.status(200).json({status: 'POST /connections OK'}
   );

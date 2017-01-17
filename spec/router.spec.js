@@ -126,6 +126,28 @@ describe('checks API routes', function () {
         }
       });
   });
+  it('POST /api/profile/band/:id', function (done) {
+    request(server)
+      .post('/api/profile/band/1234')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
+  it('POST /api/profile/musician/:id', function (done) {
+    request(server)
+      .post('/api/profile/musician/1234')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
   it('POST /api/connections', function (done) {
     request(server)
       .post('/api/connections')
