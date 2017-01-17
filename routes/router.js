@@ -28,6 +28,16 @@ router.get('/profile/musician/:id', function (req, res) {
 
 router.post('/profile/musician', function (req, res) {
   res.status(200).json({status: 'POST /profile/musician OK'}
+                       
+router.get('/ilike/:id', function (req, res) {
+  res.status(200).json({status: '/ilike/:id OK'}
+
+router.get('/match/musician/:id', function (req, res) {
+  res.status(200).json({status: '/match/musician/:id OK'}
+                       
+router.get('/match/band/:id', function (req, res) {
+  res.status(200).json({status: '/match/band/:id OK'}
+
   );
 });
 
