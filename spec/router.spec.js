@@ -126,4 +126,26 @@ describe('checks API routes', function () {
         }
       });
   });
+  it('POST /api/connections', function (done) {
+    request(server)
+      .post('/api/connections')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
+  it('POST /api/donotdisplay', function (done) {
+    request(server)
+      .post('/api/donotdisplay')
+      .end(function (err, res) {
+        if (!err) {
+          expect(res.body.status).to.be.ok;
+          expect(res.statusCode).to.equal(200);
+          done();
+        }
+      });
+  });
 });

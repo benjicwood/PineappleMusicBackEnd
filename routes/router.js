@@ -30,18 +30,22 @@ router.get('/ilike/:id', function (req, res) {
   res.status(200).json({status: '/ilike/:id OK'}
   );
 });
+
 router.get('/likesme/:id', function (req, res) {
   res.status(200).json({status: '/likesme/:id OK'}
   );
 });
+
 router.get('/match/musician/:id', function (req, res) {
   res.status(200).json({status: '/match/musician/:id OK'}
   );
 });
+
 router.get('/match/band/:id', function (req, res) {
   res.status(200).json({status: '/match/band/:id OK'}
   );
 });
+
 router.post('/profile/band', function (req, res) {
   res.status(200).json({status: '/profile/band OK'}
   );
@@ -49,6 +53,16 @@ router.post('/profile/band', function (req, res) {
 
 router.post('/profile/musician', function (req, res) {
   res.status(200).json({status: 'POST /profile/musician OK'}
+  );
+});
+
+router.post('/connections', function (req, res) {
+  res.status(200).json({status: 'POST /connections OK'}
+  );
+});
+
+router.post('/donotdisplay', function (req, res) {
+  res.status(200).json({status: 'POST /donotdisplay OK'}
   );
 });
 
