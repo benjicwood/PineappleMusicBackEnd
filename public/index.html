@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pineapple API</title>
+    <style>
+      #preview code {color: #c1002e !important;}
+    </style>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.css'>
+  </head>
+  <body id='preview'>
+    <section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Pineapple Music App
+      </h1>
+      <h2 class="subtitle">
+        API Endpoints
+      </h2>
+    </div>
+  </div>
+</section>
+<div class='container'>
+  <div class='container'>
+      <div class='content'>
+        <h3><strong>GET</strong><code>/api/genre</code></h3>
+        <h4><em>Get all the genres</em></h4>
+      </div>
+    </div>
+    <div class='container'>
+        <div class='content'>
+          <h3><strong>GET</strong><code>/api/instrument</code></h3>
+          <h4><em>Get all the instruments</em></h4>
+        </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>GET</strong><code>/api/match/band/:id</code></h3>
+            <h4><em>Get matches band matches by musician id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>GET</strong><code>/api/match/musician/:id</code></h3>
+            <h4><em>Get matches musician matches by band id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>GET</strong><code>/api/profile/band/:id</code></h3>
+            <h4><em>Get band profile by user id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>GET</strong><code>/api/profile/musician/:id</code></h3>
+            <h4><em>Get musician profile by user id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>GET</strong><code>/api/ilike/:id</code></h3>
+            <h4><em>Get user liked list by user id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>GET</strong><code>/api/likesme/:id</code></h3>
+            <h4><em>Get list of likes by user id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/profile/musician</code></h3>
+            <h4><em>Create new musician profile</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/profile/band</code></h3>
+            <h4><em>Create new band profile</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/profile/band/:id</code></h3>
+            <h4><em>Updates band profile by user id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/profile/musician/:id</code></h3>
+            <h4><em>Updates band profile by musician id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/connections</code></h3>
+            <h4><em>Creates connection entry</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/donotdisplay</code></h3>
+            <h4><em>Creates DND entry</em></h4>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
