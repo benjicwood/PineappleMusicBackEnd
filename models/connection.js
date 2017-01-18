@@ -4,7 +4,7 @@ let Schema = mongoose.Schema;
 let ConnectionSchema = new Schema({
   'liked_by': String,
   'liked': String,
-  'created_at': Date
+  'created_at': String
 },
   {
     collection: 'connection'

@@ -23,7 +23,7 @@ let MusicianSchema = new Schema({
     required: false
   },
   join_date: {
-    type: Date,
+    type: String,
     required: false
   },
   location: {

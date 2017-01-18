@@ -23,7 +23,7 @@ let BandSchema = new Schema({
     required: true
   },
   join_date: {
-    type: Date,
+    type: String,
     required: true
   },
   location: {
@@ -39,7 +39,7 @@ let BandSchema = new Schema({
     required: true
   },
   last_seen: {
-    type: Date,
+    type: String,
     required: true
   }
 },
