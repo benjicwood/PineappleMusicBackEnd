@@ -1,4 +1,4 @@
-{
+[{
   "type": "band",
   "email": "some1@band.org",
   "phone_number": "01928788691",
@@ -9,7 +9,7 @@
   "instrument":"5877c4893aecdd49742d833a",
   "genre":"5877c48b3aecdd49742d8358",
   "last_seen":"date"
-}
+},
 {
   "type": "band",
   "email": "some2@band.org",
@@ -21,7 +21,7 @@
   "instrument":"5877c4893aecdd49742d833b",
   "genre":"5877c48b3aecdd49742d8359",
   "last_seen":"date"
-}
+},
 {
   "type": "band",
   "email": "some22@band.org",
@@ -33,7 +33,7 @@
   "instrument":"5877c4893aecdd49742d833b",
   "genre":"5877c48b3aecdd49742d8359",
   "last_seen":"date"
-}
+},
 {
   "type": "band",
   "email": "some42@band.org",
@@ -45,7 +45,7 @@
   "instrument":"5877c4893aecdd49742d833b",
   "genre":"5877c48b3aecdd49742d8359",
   "last_seen":"date"
-}
+},
 {
   "type": "band",
   "email": "some33@band.org",
@@ -58,3 +58,4 @@
   "genre":"5877c48b3aecdd49742d8359",
   "last_seen":"date"
 }
+]
