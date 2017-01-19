@@ -1,20 +1,20 @@
 const models = require('../models/models.js');
 
-const retrieveGenres = function (query, callback) {
+const genres = function (query, callback) {
   models.Genre.find({}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
 };
 
-const retrieveInstruments = function (query, callback) {
+const instruments = function (query, callback) {
   models.Instrument.find({}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
 };
 
-const retrieveMatches = function (query, callback) {
+const matches = function (query, callback) {
   if (query.type === 'musician') {
     models.Band.find({'instrument': query.instrument, 'genre': query.genre}, function (error, docs) {
       if (error) return callback(error);
@@ -29,28 +29,28 @@ const retrieveMatches = function (query, callback) {
   }
 };
 
-const retrieveBandProfile = function (query, callback) {
+const bandProfile = function (query, callback) {
   models.Band.find({'_id': query}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
 };
 
-const retrieveMusicianProfile = function (query, callback) {
+const musicianProfile = function (query, callback) {
   models.Musician.find({'_id': query}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
 };
 
-const retrieveILike = function (query, callback) {
+const iLike = function (query, callback) {
   models.Connection.find({'liked_by': query}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
 };
 
-const retrieveLikesMe = function (query, callback) {
+const likesMe = function (query, callback) {
   models.Connection.find({'likes': query}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
@@ -58,11 +58,11 @@ const retrieveLikesMe = function (query, callback) {
 };
 
 module.exports = {
-  retrieveGenres: retrieveGenres,
-  retrieveInstruments: retrieveInstruments,
-  retrieveMatches: retrieveMatches,
-  retrieveBandProfile: retrieveBandProfile,
-  retrieveMusicianProfile: retrieveMusicianProfile,
-  retrieveILike: retrieveILike,
-  retrieveLikesMe: retrieveLikesMe
+  genres: genres,
+  instruments: instruments,
+  matches: matches,
+  bandProfile: bandProfile,
+  musicianProfile: musicianProfile,
+  iLike: iLike,
+  likesMe: likesMe
 };

@@ -1,6 +1,6 @@
 const models = require('../models/models.js');
 
-const createMusicianProfile = function (query, callback) {
+const musicianProfile = function (query, callback) {
   let newProfile = new models.Musician(query);
   newProfile.save(function (error, docs) {
     if (error) return callback(error);
@@ -8,7 +8,7 @@ const createMusicianProfile = function (query, callback) {
   });
 };
 
-const createBandProfile = function (query, callback) {
+const bandProfile = function (query, callback) {
   let newProfile = new models.Musician(query);
   newProfile.save(function (error, docs) {
     if (error) return callback(error);
@@ -16,7 +16,7 @@ const createBandProfile = function (query, callback) {
   });
 };
 
-const createConnection = function (query, callback) {
+const connection = function (query, callback) {
   let newConnection = new models.Connection(query);
   newConnection.save(function (error, docs) {
     if (error) return callback(error);
@@ -24,7 +24,7 @@ const createConnection = function (query, callback) {
   });
 };
 
-const createDoNotDisplay = function (query, callback) {
+const doNotDisplay = function (query, callback) {
   let newDoNotDisplay = new models.DoNotDisplay(query);
   newDoNotDisplay.save(query, function (error, docs) {
     if (error) return callback(error);
@@ -33,8 +33,8 @@ const createDoNotDisplay = function (query, callback) {
 };
 
 module.exports = {
-  createBandProfile: createBandProfile,
-  createMusicianProfile: createMusicianProfile,
-  createConnection: createConnection,
-  createDoNotDisplay: createDoNotDisplay
+  bandProfile: bandProfile,
+  musicianProfile: musicianProfile,
+  connection: connection,
+  doNotDisplay: doNotDisplay
 };
