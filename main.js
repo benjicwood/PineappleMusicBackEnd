@@ -1,7 +1,7 @@
 // express server
 const express = require('express');
 const app = express();
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3001;
 let path = require('path');
 
 // body parser for support json encoded bodies

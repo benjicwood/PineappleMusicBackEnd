@@ -9,7 +9,7 @@ const musicianProfile = function (query, callback) {
 };
 
 const bandProfile = function (query, callback) {
-  let newProfile = new models.Musician(query);
+  let newProfile = new models.Band(query);
   newProfile.save(function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);

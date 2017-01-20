@@ -1,13 +1,13 @@
 const models = require('../models/models.js');
 
-const genres = function (query, callback) {
+const genres = function (callback) {
   models.Genre.find({}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
 };
 
-const instruments = function (query, callback) {
+const instruments = function (callback) {
   models.Instrument.find({}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
@@ -43,15 +43,15 @@ const musicianProfile = function (query, callback) {
   });
 };
 
-const iLike = function (query, callback) {
-  models.Connection.find({'liked_by': query}, function (error, docs) {
+const myHeavenOrHell = function (type, id, callback) {
+  models.Connection.find({'type': type, 'source_id': id}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
 };
 
-const likesMe = function (query, callback) {
-  models.Connection.find({'likes': query}, function (error, docs) {
+const theirHeaven = function (id, callback) {
+  models.Connection.find({'type': 'heaven', 'target_id': id}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
@@ -63,6 +63,6 @@ module.exports = {
   matches: matches,
   bandProfile: bandProfile,
   musicianProfile: musicianProfile,
-  iLike: iLike,
-  likesMe: likesMe
+  myHeavenOrHell: myHeavenOrHell,
+  theirHeaven: theirHeaven
 };
