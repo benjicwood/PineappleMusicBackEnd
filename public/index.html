@@ -25,37 +25,25 @@
   <div class='container'>
       <div class='content'>
         <h3><strong>GET</strong><code>/api/genre</code></h3>
-        <h4><em>Get all the genres</em></h4>
+        <h4><em>Gets all the genres</em></h4>
       </div>
     </div>
     <div class='container'>
         <div class='content'>
           <h3><strong>GET</strong><code>/api/instrument</code></h3>
-          <h4><em>Get all the instruments</em></h4>
+          <h4><em>Gets all the instruments</em></h4>
         </div>
       </div>
       <div class='container'>
           <div class='content'>
-            <h3><strong>GET</strong><code>/api/match/band/:id</code></h3>
-            <h4><em>Get matches band matches by musician id</em></h4>
+            <h3><strong>GET</strong><code>/api/matches</code></h3>
+            <h4><em>Gets matches band matches by musician id</em></h4>
           </div>
       </div>
       <div class='container'>
           <div class='content'>
-            <h3><strong>GET</strong><code>/api/match/musician/:id</code></h3>
-            <h4><em>Get matches musician matches by band id</em></h4>
-          </div>
-      </div>
-      <div class='container'>
-          <div class='content'>
-            <h3><strong>GET</strong><code>/api/profile/band/:id</code></h3>
-            <h4><em>Get band profile by user id</em></h4>
-          </div>
-      </div>
-      <div class='container'>
-          <div class='content'>
-            <h3><strong>GET</strong><code>/api/profile/musician/:id</code></h3>
-            <h4><em>Get musician profile by user id</em></h4>
+            <h3><strong>GET</strong><code>/api/profile/:type/:id</code></h3>
+            <h4><em>Get band or musician profile by user id</em></h4>
           </div>
       </div>
       <div class='container'>
@@ -72,26 +60,14 @@
       </div>
       <div class='container'>
           <div class='content'>
-            <h3><strong>POST</strong><code>/api/profile/musician</code></h3>
-            <h4><em>Create new musician profile</em></h4>
+            <h3><strong>POST</strong><code>/api/profile/:type</code></h3>
+            <h4><em>Create new band/musician profile</em></h4>
           </div>
       </div>
       <div class='container'>
           <div class='content'>
-            <h3><strong>POST</strong><code>/api/profile/band</code></h3>
-            <h4><em>Create new band profile</em></h4>
-          </div>
-      </div>
-      <div class='container'>
-          <div class='content'>
-            <h3><strong>POST</strong><code>/api/profile/band/:id</code></h3>
-            <h4><em>Updates band profile by user id</em></h4>
-          </div>
-      </div>
-      <div class='container'>
-          <div class='content'>
-            <h3><strong>POST</strong><code>/api/profile/musician/:id</code></h3>
-            <h4><em>Updates band profile by musician id</em></h4>
+            <h3><strong>POST</strong><code>/api/profile/:type/:id</code></h3>
+            <h4><em>Updates band/musician profile by user id</em></h4>
           </div>
       </div>
       <div class='container'>
