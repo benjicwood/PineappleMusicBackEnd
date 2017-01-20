@@ -61,21 +61,13 @@ router.post('/profile/band', function (req, res) {
     res.send(data);
   });
 });
-
-router.post('/connections', function (req, res) {
+// POST connection by type (heaven/hell)
+router.post('/connections/:type', function (req, res) {
   create.connection(req.body, function (error, data) {
     if (error) res.status(500).send(error);
     res.send(data);
   });
 });
-
-router.post('/donotdisplay', function (req, res) {
-  create.doNotDisplay(req.body, function (error, data) {
-    if (error) res.status(500).send(error);
-    res.send(data);
-  });
-});
-
 // /////////////// UPDATE ROUTES //////////////////////
 // POST to update band/musician profile
 router.post('/profile/:type/:id', function (req, res) {

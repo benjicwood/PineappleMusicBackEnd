@@ -3,6 +3,5 @@ module.exports = {
   Band: require('./band'),
   Instrument: require('./instrument'),
   Genre: require('./genre'),
-  Connection: require('./connection'),
-  DoNotDisplay: require('./donotdisplay')
+  Connection: require('./connection')
 };

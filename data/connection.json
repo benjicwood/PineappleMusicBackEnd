@@ -13,14 +13,14 @@
   },
   {
   "type": "hell",
-  "hated_by":"5877c4873aecdd49742d8339",
-  "hates":"5877c4863aecdd49742d8338",
+  "source_id":"5877c4873aecdd49742d8339",
+  "target_id":"5877c4863aecdd49742d8338",
   "date": "date"
 },
 {
   "type": "hell",
-  "hated_by":"5877c4863aecdd49742d8338",
-  "hates":"5877c4873aecdd49742d8339",
+  "source_id":"5877c4863aecdd49742d8338",
+  "target_id":"5877c4873aecdd49742d8339",
   "date": "date"
 }
 ]

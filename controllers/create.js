@@ -24,17 +24,8 @@ const connection = function (query, callback) {
   });
 };
 
-const doNotDisplay = function (query, callback) {
-  let newDoNotDisplay = new models.DoNotDisplay(query);
-  newDoNotDisplay.save(query, function (error, docs) {
-    if (error) return callback(error);
-    callback(null, docs);
-  });
-};
-
 module.exports = {
   bandProfile: bandProfile,
   musicianProfile: musicianProfile,
-  connection: connection,
-  doNotDisplay: doNotDisplay
+  connection: connection
 };
