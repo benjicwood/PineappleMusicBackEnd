@@ -28,16 +28,6 @@ mongoose.connect(dbLocation, function (error) {
       console.log(document);
     });
   });
-  data.donotdisplay.forEach((donotdisplayObj) => {
-    let donotdisplay = new models.DoNotDisplay(donotdisplayObj);
-    donotdisplay.save(function (error, document) {
-      if (error) {
-        console.log(error);
-        process.exit();
-      }
-      console.log(document);
-    });
-  });
   data.genre.forEach((genreObj) => {
     let genre = new models.Genre(genreObj);
     genre.save(function (error, document) {
