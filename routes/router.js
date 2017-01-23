@@ -38,7 +38,7 @@ router.get('/profile/:type/:id', function (req, res) {
       res.send(data);
     });
   } else {
-    res.send({error: "Invalid type parameter. Use 'band' or 'musician'"});
+    res.status(500).send({error: 'Invalid :type parameter'});
   }
 });
 // GET for heaven connections - my heaven or my hell

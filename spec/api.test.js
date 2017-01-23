@@ -131,8 +131,28 @@ describe('API ROUTES', function () {
           done();
         });
     });
-    // it('returns an error when :type is not "band" or "musician"', (done) => {
-    //
-    // });
+    it('returns an error when :type is not "band" or "musician"', (done) => {
+      let musicianSamples = sampleIds.musician.map(band => band);
+      let musicianSampleIds = musicianSamples[0]._id;
+      let bandSamples = (sampleIds.band.map(band => band));
+      let bandSampleIds = bandSamples[0]._id;
+      request(ROOT)
+        .get(`/profile/blah/${musicianSampleIds}`)
+        .expect(500)
+        .end(function (err, res) {
+          if (err) throw err;
+          expect(res.statusCode).to.equal(500);
+          expect(res.body.error).to.equal('Invalid :type parameter');
+        });
+      request(ROOT)
+        .get(`/profile/blah/${bandSampleIds}`)
+        .expect(500)
+        .end(function (err, res) {
+          if (err) throw err;
+          expect(res.statusCode).to.equal(500);
+          expect(res.body.error).to.equal('Invalid :type parameter');
+          done();
+        });
+    });
   });
 });
