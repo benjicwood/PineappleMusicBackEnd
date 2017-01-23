@@ -46,17 +46,17 @@ function saveConnection (dataObj, cb) {
     if (err) cb(err);
     else {
       dataObj.connection = res;
-      cb(null);
+      cb(null, dataObj);
     }
   });
 }
 
 function saveTestData (cb) {
-  async.waterfall([saveBand, saveMusician, saveInstrument, saveGenre, saveConnection], (err, ids) => {
+  async.waterfall([saveBand, saveMusician, saveInstrument, saveGenre, saveConnection], (err, dataObj) => {
     if (err) cb(err);
     else {
       console.log('Test data seeded successfully.');
-      cb(null, ids);
+      cb(null, dataObj);
     }
   });
 }
