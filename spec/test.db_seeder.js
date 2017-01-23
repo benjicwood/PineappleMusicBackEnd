@@ -1,47 +1,62 @@
 const async = require('async');
 const data = require('./test_data/test.data');
+const models = require('../models/models');
 
 function saveBand (cb) {
-  data.testBand.save(err => {
+  models.Band.create(data.testBand, function (err, res) {
     if (err) cb(err);
-    else cb();
+    else {
+      cb(null, {band: res});
+    }
   });
 }
 
-function saveMusician (cb) {
-  data.testMusician.save(err => {
+function saveMusician (dataObj, cb) {
+  models.Musician.create(data.testMusician, function (err, res) {
     if (err) cb(err);
-    else cb();
+    else {
+      dataObj.musician = res;
+      cb(null, dataObj);
+    }
   });
 }
 
-function saveInstrument (cb) {
-  data.testInstrument.save(err => {
+function saveInstrument (dataObj, cb) {
+  models.Instrument.create(data.testInstrument, function (err, res) {
     if (err) cb(err);
-    else cb();
+    else {
+      dataObj.instrument = res;
+      cb(null, dataObj);
+    }
   });
 }
 
-function saveGenre (cb) {
-  data.testGenre.save(err => {
+function saveGenre (dataObj, cb) {
+  models.Genre.create(data.testGenre, function (err, res) {
     if (err) cb(err);
-    else cb();
+    else {
+      dataObj.genre = res;
+      cb(null, dataObj);
+    }
   });
 }
 
-function saveConnection (cb) {
-  data.testConnection.save(err => {
+function saveConnection (dataObj, cb) {
+  models.Connection.create(data.testConnection, function (err, res) {
     if (err) cb(err);
-    else cb();
+    else {
+      dataObj.connection = res;
+      cb(null);
+    }
   });
 }
 
 function saveTestData (cb) {
   async.waterfall([saveBand, saveMusician, saveInstrument, saveGenre, saveConnection], (err, ids) => {
-    if (err) console.log(err);
+    if (err) cb(err);
     else {
       console.log('Test data seeded successfully.');
-      cb(ids);
+      cb(null, ids);
     }
   });
 }
