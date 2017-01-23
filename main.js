@@ -1,8 +1,14 @@
+if (!process.env.NODE_ENV) process.env.NODE_ENV = 'dev';
+
 // express server
 const express = require('express');
 const app = express();
-let PORT = process.env.PORT || 3001;
 let path = require('path');
+
+// PORT config for dev and test
+const config = require('./config');
+const db = config.DB[process.env.NODE_ENV] || process.env.DB;
+const PORT = config.PORT[process.env.NODE_ENV] || process.env.PORT;
 
 // body parser for support json encoded bodies
 const bodyParser = require('body-parser');
@@ -14,7 +20,6 @@ const apiRouter = require('./routes/router');
 app.use('/api', apiRouter);
 
 // mongodb hookup
-const db = 'mongodb://localhost/pineapple';
 const mongoose = require('mongoose');
 mongoose.connect(db, function (err) {
   if (!err) {

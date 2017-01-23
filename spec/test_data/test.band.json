@@ -1,26 +1,26 @@
 [
   {
-  "type": "band",
-  "email": "some1@band.org",
-  "phone_number": "01928788691",
-  "username": "toooodoooo store orkestra",
-  "profile_pic": "https://robohash.org/dignissimosminimavoluptatibus.png",
-  "join_date":"date",
-  "location":{"lat":"00000", "long":"00000"},
-  "instrument":"5877c4893aecdd49742d833a",
-  "genre":"5877c48b3aecdd49742d8358",
-  "last_seen":"date"
-},
-{
-  "type": "band",
-  "email": "some2@band.org",
-  "phone_number": "01928788692",
-  "username": "hairy coconuts",
-  "profile_pic": "https://robohash.org/dignissimosminimavoluptatibus.png",
-  "join_date":"date",
-  "location":{"lat":"00000", "long":"00000"},
-  "instrument":"5877c4893aecdd49742d833b",
-  "genre":"5877c48b3aecdd49742d8359",
-  "last_seen":"date"
-}
+    "type": "band",
+    "email": "some1@band.org",
+    "phone_number": "01928788691",
+    "username": "toooodoooo store orkestra",
+    "profile_pic": "https://robohash.org/dignissimosminimavoluptatibus.png",
+    "join_date":"date",
+    "location":{"lat":"00000", "long":"00000"},
+    "instrument":"5877c4893aecdd49742d833a",
+    "genre":"5877c48b3aecdd49742d8358",
+    "last_seen":"date"
+  },
+  {
+    "type": "band",
+    "email": "some2@band.org",
+    "phone_number": "01928788692",
+    "username": "hairy coconuts",
+    "profile_pic": "https://robohash.org/dignissimosminimavoluptatibus.png",
+    "join_date":"date",
+    "location":{"lat":"00000", "long":"00000"},
+    "instrument":"5877c4893aecdd49742d833b",
+    "genre":"5877c48b3aecdd49742d8359",
+    "last_seen":"date"
+  }
 ]
