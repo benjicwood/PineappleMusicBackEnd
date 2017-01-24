@@ -313,9 +313,9 @@ describe('API ROUTES', function () {
           if (err) throw err;
           expect(res.statusCode).to.equal(200);
           expect(res.body[0].type).to.equal('band');
-          expect(res.body.user_name).to.not.equal(null);
-          expect(res.body.instrument).to.not.equal(null);
-          expect(res.body.genre).to.not.equal(null);
+          expect(res.body[0].user_name).to.not.equal(null);
+          expect(res.body[0].instrument).to.not.equal(null);
+          expect(res.body[0].genre).to.not.equal(null);
         });
     });
     it('sends a band profile to retrieve matching musicians', () => {
@@ -332,9 +332,9 @@ describe('API ROUTES', function () {
           if (err) throw err;
           expect(res.statusCode).to.equal(200);
           expect(res.body[0].type).to.equal('musician');
-          expect(res.body.user_name).to.not.equal(null);
-          expect(res.body.instrument).to.not.equal(null);
-          expect(res.body.genre).to.not.equal(null);
+          expect(res.body[0].user_name).to.not.equal(null);
+          expect(res.body[0].instrument).to.not.equal(null);
+          expect(res.body[0].genre).to.not.equal(null);
         });
     });
   });
