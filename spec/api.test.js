@@ -298,4 +298,44 @@ describe('API ROUTES', function () {
         });
     });
   });
+  describe('POST /matches', () => {
+    let testMusicianProfile = {
+      type: 'musician',
+      user_name: 'fancypants001',
+      instrument: '5877c4893aecdd49742d833a',
+      genre: '5877c48b3aecdd49742d8358'
+    };
+    it('sends a musician profile to retrieve matching bands', () => {
+      request(ROOT)
+        .post('/matches')
+        .send(testMusicianProfile)
+        .end(function (err, res) {
+          if (err) throw err;
+          expect(res.statusCode).to.equal(200);
+          expect(res.body[0].type).to.equal('band');
+          expect(res.body.user_name).to.not.equal(null);
+          expect(res.body.instrument).to.not.equal(null);
+          expect(res.body.genre).to.not.equal(null);
+        });
+    });
+    it('sends a band profile to retrieve matching musicians', () => {
+      let testBandProfile = {
+        type: 'band',
+        user_name: 'fancypants001',
+        instrument: '5877c4893aecdd49742d833a',
+        genre: '5877c48b3aecdd49742d8358'
+      };
+      request(ROOT)
+        .post('/matches')
+        .send(testBandProfile)
+        .end(function (err, res) {
+          if (err) throw err;
+          expect(res.statusCode).to.equal(200);
+          expect(res.body[0].type).to.equal('musician');
+          expect(res.body.user_name).to.not.equal(null);
+          expect(res.body.instrument).to.not.equal(null);
+          expect(res.body.genre).to.not.equal(null);
+        });
+    });
+  });
 });

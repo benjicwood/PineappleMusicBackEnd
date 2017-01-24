@@ -62,13 +62,13 @@ router.get('/connection/:type/:id', function (req, res) {
 });
 
 // /////////////// POST ROUTES //////////////////////
-// POST to retrieve match information for user
-// router.post('/matches', function (req, res) {
-//   retrieve.matches(req.body, function (error, data) {
-//     if (error) res.status(500).send(error);
-//     res.send(data);
-//   });
-// });
+// POST to retrieve match information
+router.post('/matches', function (req, res) {
+  retrieve.matches(req.body, function (error, data) {
+    if (error) res.status(500).send(error);
+    res.send(data);
+  });
+});
 // POST to create band/musician profile
 router.post('/profile/:type', function (req, res) {
   if (req.params.type === 'band') {

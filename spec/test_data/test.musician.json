@@ -22,5 +22,17 @@
     "instrument":"5877c4893aecdd49742d833b",
     "genre":"5877c48b3aecdd49742d8359",
     "last_seen":"date"
+  },
+  {
+    "type": "musician",
+    "email": "3mus@ici.an",
+    "phone_number": "01928789903",
+    "user_name": "fancypants003",
+    "profile_pic": "http://www.pics-r-us.com/0000001.png",
+    "join_date":"date",
+    "location":{"lat":"00000","long":"00000"},
+    "instrument":"5877c4893aecdd49742d833c",
+    "genre":"5877c48b3aecdd49742d835a",
+    "last_seen":"date"
   }
 ]
