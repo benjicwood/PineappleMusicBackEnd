@@ -57,7 +57,7 @@ router.get('/connection/:type/:id', function (req, res) {
       res.send(data);
     });
   } else {
-    res.send({error: 'Invalid parameters. Please check'});
+    res.status(500).send({error: 'Invalid :type parameter'});
   }
 });
 
