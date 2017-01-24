@@ -254,7 +254,7 @@ describe('API ROUTES', function () {
       instrument: 'testInstrument',
       genre: 'testGenre'
     };
-    it('should post a profile object to /profile/band', (done) => {
+    it('accepts a profile object to /profile/band', (done) => {
       request(ROOT)
         .post('/profile/band')
         .send(testBandProfile)
@@ -274,7 +274,7 @@ describe('API ROUTES', function () {
       instrument: 'testInstrument',
       genre: 'testGenre'
     };
-    it('should post a profile object to /profile/musician', (done) => {
+    it('accepts a profile object to /profile/musician', (done) => {
       request(ROOT)
         .post('/profile/musician')
         .send(testMusicianProfile)
@@ -288,7 +288,7 @@ describe('API ROUTES', function () {
           done();
         });
     });
-    it('should not allow a post to /profile/:type with an empty object', (done) => {
+    it('doesn\'t allow a post to /profile/:type with an empty object', (done) => {
       request(ROOT)
         .post('/profile/musician')
         .send({})
@@ -305,7 +305,7 @@ describe('API ROUTES', function () {
       instrument: '5877c4893aecdd49742d833a',
       genre: '5877c48b3aecdd49742d8358'
     };
-    it('sends a musician profile to retrieve matching bands', () => {
+    it('accepts a musician profile to retrieve matching bands', (done) => {
       request(ROOT)
         .post('/matches')
         .send(testMusicianProfile)
@@ -316,9 +316,10 @@ describe('API ROUTES', function () {
           expect(res.body[0].user_name).to.not.equal(null);
           expect(res.body[0].instrument).to.not.equal(null);
           expect(res.body[0].genre).to.not.equal(null);
+          done();
         });
     });
-    it('sends a band profile to retrieve matching musicians', () => {
+    it('accepts a band profile to retrieve matching musicians', (done) => {
       let testBandProfile = {
         type: 'band',
         user_name: 'fancypants001',
@@ -335,6 +336,41 @@ describe('API ROUTES', function () {
           expect(res.body[0].user_name).to.not.equal(null);
           expect(res.body[0].instrument).to.not.equal(null);
           expect(res.body[0].genre).to.not.equal(null);
+          done();
+        });
+    });
+  });
+  describe('POST /connection', () => {
+    it('accepts a "heaven" connection object', (done) => {
+      let testHeavenConnection = {
+        type: 'heaven',
+        source_id: 'testSourceId',
+        target_id: 'testTargetID'
+      };
+      request(ROOT)
+        .post('/connection')
+        .send(testHeavenConnection)
+        .end(function (err, res) {
+          if (err) throw err;
+          expect(res.statusCode).to.equal(200);
+          expect(res.body.type).to.equal('heaven');
+          done();
+        });
+    });
+    it('accepts a "hell" connection object', (done) => {
+      let testHellConnection = {
+        type: 'hell',
+        source_id: 'testSourceId',
+        target_id: 'testTargetID'
+      };
+      request(ROOT)
+        .post('/connection')
+        .send(testHellConnection)
+        .end(function (err, res) {
+          if (err) throw err;
+          expect(res.statusCode).to.equal(200);
+          expect(res.body.type).to.equal('hell');
+          done();
         });
     });
   });
