@@ -248,16 +248,16 @@ describe('API ROUTES', function () {
     });
   });
   describe('POST /profile/:type', () => {
-    let testProfile = {
+    let testBandProfile = {
       type: 'band',
       user_name: 'testusername',
       instrument: 'testInstrument',
       genre: 'testGenre'
     };
-    it('should post a profile object', (done) => {
+    it('should post a profile object to /profile/band', (done) => {
       request(ROOT)
         .post('/profile/band')
-        .send(testProfile)
+        .send(testBandProfile)
         .end(function (err, res) {
           if (err) throw err;
           expect(res.statusCode).to.equal(200);
@@ -265,6 +265,35 @@ describe('API ROUTES', function () {
           expect(res.body.user_name).to.equal('testusername');
           expect(res.body.instrument).to.equal('testInstrument');
           expect(res.body.genre).to.equal('testGenre');
+          done();
+        });
+    });
+    let testMusicianProfile = {
+      type: 'musician',
+      user_name: 'testusername',
+      instrument: 'testInstrument',
+      genre: 'testGenre'
+    };
+    it('should post a profile object to /profile/musician', (done) => {
+      request(ROOT)
+        .post('/profile/musician')
+        .send(testMusicianProfile)
+        .end(function (err, res) {
+          if (err) throw err;
+          expect(res.statusCode).to.equal(200);
+          expect(res.body.type).to.equal('musician');
+          expect(res.body.user_name).to.equal('testusername');
+          expect(res.body.instrument).to.equal('testInstrument');
+          expect(res.body.genre).to.equal('testGenre');
+          done();
+        });
+    });
+    it('should not allow a post to /profile/:type with an empty object', (done) => {
+      request(ROOT)
+        .post('/profile/musician')
+        .send({})
+        .end(function (err, res) {
+          if (err) throw err;
           done();
         });
     });
