@@ -38,7 +38,7 @@ router.get('/profile/:type/:id', function (req, res) {
       res.send(data);
     });
   } else {
-    res.send({error: "Invalid type parameter. Use 'band' or 'musician'"});
+    res.status(500).send({error: 'Invalid :type parameter'});
   }
 });
 // GET for heaven connections - my heaven or my hell
@@ -57,18 +57,18 @@ router.get('/connection/:type/:id', function (req, res) {
       res.send(data);
     });
   } else {
-    res.send({error: 'Invalid parameters. Please check'});
+    res.status(500).send({error: 'Invalid :type parameter'});
   }
 });
 
 // /////////////// POST ROUTES //////////////////////
-// POST to retrieve match information for user
-// router.post('/matches', function (req, res) {
-//   retrieve.matches(req.body, function (error, data) {
-//     if (error) res.status(500).send(error);
-//     res.send(data);
-//   });
-// });
+// POST to retrieve match information
+router.post('/matches', function (req, res) {
+  retrieve.matches(req.body, function (error, data) {
+    if (error) res.status(500).send(error);
+    res.send(data);
+  });
+});
 // POST to create band/musician profile
 router.post('/profile/:type', function (req, res) {
   if (req.params.type === 'band') {

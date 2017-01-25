@@ -4,7 +4,7 @@ let Schema = mongoose.Schema;
 let MusicianSchema = new Schema({
   type: {
     type: String,
-    required: false
+    required: true
   },
   email: {
     type: String,
@@ -14,9 +14,9 @@ let MusicianSchema = new Schema({
     type: Number,
     required: false
   },
-  username: {
+  user_name: {
     type: String,
-    required: false
+    required: true
   },
   profile_pic: {
     type: String,
@@ -32,11 +32,11 @@ let MusicianSchema = new Schema({
   },
   instrument: {
     type: String,
-    required: false
+    required: true
   },
   genre: {
     type: String,
-    required: false
+    required: true
   },
   last_seen: {
     type: String,

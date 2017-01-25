@@ -4,27 +4,27 @@ let Schema = mongoose.Schema;
 let BandSchema = new Schema({
   type: {
     type: String,
-    required: false
+    required: true
   },
   email: {
     type: String,
-    required: true
+    required: false
   },
   phone_number: {
     type: Number,
     required: false
   },
-  username: {
+  user_name: {
     type: String,
     required: true
   },
   profile_pic: {
     type: String,
-    required: true
+    required: false
   },
   join_date: {
     type: String,
-    required: true
+    required: false
   },
   location: {
     type: Object,
@@ -40,7 +40,7 @@ let BandSchema = new Schema({
   },
   last_seen: {
     type: String,
-    required: true
+    required: false
   }
 },
   {
