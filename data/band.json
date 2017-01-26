@@ -1,61 +1,141 @@
 [{
   "type": "band",
-  "email": "some1@band.org",
-  "phone_number": "01928788691",
-  "user_name": "toooodoooo store orkestra",
-  "profile_pic": "https://robohash.org/dignissimosminimavoluptatibus.png",
-  "join_date":"date",
-  "location":{"lat":"00000", "long":"00000"},
-  "instrument":"5877c4893aecdd49742d833a",
-  "genre":"5877c48b3aecdd49742d8358",
-  "last_seen":"date"
-},
-{
+  "email": "wfields0@icq.com",
+  "phone_number": "55-(420)986-3920",
+  "user_name": "Metallica",
+  "profile_pic": "http://imgmr.com/wp-content/uploads/2016/07/metallica-2016-band-890x606.jpg",
+  "join_date": "9/7/2016",
+  "location": {
+    "lat": "-5.14556",
+    "long": "-38.09806"
+  },
+  "instrument": "5881fd0af367920a753b9031",
+  "genre": "5881fd0af367920a753b9020",
+  "last_seen": "10/6/2016"
+}, {
   "type": "band",
-  "email": "some2@band.org",
-  "phone_number": "01928788692",
-  "user_name": "hairy coconuts",
-  "profile_pic": "https://robohash.org/dignissimosminimavoluptatibus.png",
-  "join_date":"date",
-  "location":{"lat":"00000", "long":"00000"},
-  "instrument":"5877c4893aecdd49742d833b",
-  "genre":"5877c48b3aecdd49742d8359",
-  "last_seen":"date"
-},
-{
+  "email": "clong1@google.com",
+  "phone_number": "51-(306)422-9592",
+  "user_name": "Spice Girls",
+  "profile_pic": "https://davfarrell1.files.wordpress.com/2014/08/original-7931-1375315029-24.jpg",
+  "join_date": "11/24/2016",
+  "location": {
+    "lat": "-14.00806",
+    "long": "-71.99806"
+  },
+  "instrument": "5881fd0af367920a753b9027",
+  "genre": "5881fd0af367920a753b901d",
+  "last_seen": "12/5/2016"
+}, {
   "type": "band",
-  "email": "some22@band.org",
-  "phone_number": "01928788692",
-  "user_name": "scary bananas",
-  "profile_pic": "https://robohash.org/magnamodioquisquam.png",
-  "join_date":"date",
-  "location":{"lat":"00000", "long":"00000"},
-  "instrument":"5877c4893aecdd49742d833b",
-  "genre":"5877c48b3aecdd49742d8359",
-  "last_seen":"date"
-},
-{
+  "email": "jlawrence2@engadget.com",
+  "phone_number": "86-(126)589-7022",
+  "user_name": "Radiohead",
+  "profile_pic": "http://i4.mirror.co.uk/incoming/article7556068.ece/ALTERNATES/s810/MAIN-Radiohead.jpg",
+  "join_date": "5/7/2016",
+  "location": {
+    "lat": "23.33284",
+    "long": "113.29198"
+  },
+  "instrument": "5881fd0af367920a753b9026",
+  "genre": "5881fd0af367920a753b9021",
+  "last_seen": "3/17/2016"
+}, {
   "type": "band",
-  "email": "some42@band.org",
-  "phone_number": "01928788692",
-  "user_name": "crucial shoes",
-  "profile_pic": "https://robohash.org/istequisnecessitatibus.png",
-  "join_date":"date",
-  "location":{"lat":"00000", "long":"00000"},
-  "instrument":"5877c4893aecdd49742d833b",
-  "genre":"5877c48b3aecdd49742d8359",
-  "last_seen":"date"
-},
-{
+  "email": "rwagner3@gnu.org",
+  "phone_number": "420-(622)227-2269",
+  "user_name": "ACDC",
+  "profile_pic": "http://www.trbimg.com/img-560a9aa4/turbine/la-et-ms-ac-dc-at-dodger-stadium-5-quick-thoug-001/650/650x366",
+  "join_date": "6/9/2016",
+  "location": {
+    "lat": "50.10742",
+    "long": "16.26131"
+  },
+  "instrument": "5881fd0af367920a753b9022",
+  "genre": "5881fd0af367920a753b9020",
+  "last_seen": "9/9/2016"
+}, {
   "type": "band",
-  "email": "some33@band.org",
-  "phone_number": "01928788692",
-  "user_name": "hairy plums",
-  "profile_pic": "https://robohash.org/dignissimosminimavoluptatibus.png",
-  "join_date":"date",
-  "location":{"lat":"00000", "long":"00000"},
-  "instrument":"5877c4893aecdd49742d833c",
-  "genre":"5877c48b3aecdd49742d8359",
-  "last_seen":"date"
-}
-]
+  "email": "mlittle4@php.net",
+  "phone_number": "86-(931)424-3922",
+  "user_name": "Rolling Stones",
+  "profile_pic": "http://esq.h-cdn.co/assets/16/31/980x490/landscape-1470338532-rolling-stones-totally-stripped-courtesy-eagle-rock.jpg",
+  "join_date": "9/9/2016",
+  "location": {
+    "lat": "28.59265",
+    "long": "89.2024"
+  },
+  "instrument": "5881fd0af367920a753b9023",
+  "genre": "5881fd0af367920a753b9017",
+  "last_seen": "12/13/2016"
+}, {
+  "type": "band",
+  "email": "jroberts5@ovh.net",
+  "phone_number": "86-(932)133-6903",
+  "user_name": "Led Zeppelin",
+  "profile_pic": "http://www.telegraph.co.uk/content/dam/music/2016/09/15/led-zep-1-large_trans++qVzuuqpFlyLIwiB6NTmJwRWh7JMUrw5S69_Kb2uJ7x4.jpg",
+  "join_date": "3/30/2016",
+  "location": {
+    "lat": "29.47708",
+    "long": "110.16677"
+  },
+  "instrument": "5881fd0af367920a753b9022",
+  "genre": "5881fd0af367920a753b9013",
+  "last_seen": "6/8/2016"
+}, {
+  "type": "band",
+  "email": "bhicks6@scientificamerican.com",
+  "phone_number": "86-(473)817-7863",
+  "user_name": "Savages",
+  "profile_pic": "https://cdn2.thelineofbestfit.com/images/remote/https_cdn2.thelineofbestfit.com/portraits/savages-jason-williamson.jpg",
+  "join_date": "10/30/2016",
+  "location": {
+    "lat": "46.80168",
+    "long": "130.29017"
+  },
+  "instrument": "5881fd0af367920a753b9022",
+  "genre": "5881fd0af367920a753b9012",
+  "last_seen": "2/10/2016"
+}, {
+  "type": "band",
+  "email": "cgrant7@merriam-webster.com",
+  "phone_number": "251-(915)378-3609",
+  "user_name": "Blondie",
+  "profile_pic": "http://cdn.images.express.co.uk/img/dynamic/galleries/x701/63384.jpg",
+  "join_date": "1/31/2016",
+  "location": {
+    "lat": "5.65",
+    "long": "37.36667"
+  },
+  "instrument": "5881fd0af367920a753b9023",
+  "genre": "5881fd0af367920a753b9021",
+  "last_seen": "8/17/2016"
+}, {
+  "type": "band",
+  "email": "breyes8@state.gov",
+  "phone_number": "86-(398)511-5265",
+  "user_name": "Pantera",
+  "profile_pic": "http://stmedia.stimg.co/ctyp_81586197c7db4_pantera.jpg?w=800",
+  "join_date": "1/15/2017",
+  "location": {
+    "lat": "44.57149",
+    "long": "129.38539"
+  },
+  "instrument": "5881fd0af367920a753b9023",
+  "genre": "5881fd0af367920a753b9020",
+  "last_seen": "4/14/2016"
+}, {
+  "type": "band",
+  "email": "ssanders9@com.com",
+  "phone_number": "1-(602)108-3350",
+  "user_name": "Otep",
+  "profile_pic": "http://www.ticketline.co.uk/images/artist/otep/otep.jpg",
+  "join_date": "8/25/2016",
+  "location": {
+    "lat": "33.2765",
+    "long": "-112.1872"
+  },
+  "instrument": "5881fd0af367920a753b9022",
+  "genre": "5881fd0af367920a753b9020",
+  "last_seen": "7/2/2016"
+}]

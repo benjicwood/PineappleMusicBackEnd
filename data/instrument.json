@@ -6,7 +6,7 @@
 {"name":"Cello"},
 {"name":"Saxophone"},
 {"name":"Trumpet"},
-{"name":"Piccolo"},
+{"name":"Piano"},
 {"name":"Flute"},
 {"name":"Clarinet"},
 {"name":"Oboe"},
@@ -18,15 +18,5 @@
 {"name":"Kettledrum"},
 {"name":"Bongos"},
 {"name":"Conga (drum)"},
-{"name":"Cymbals"},
-{"name":"Xylophone"},
-{"name":"Gong"},
-{"name":"Cymbals"},
-{"name":"Tambourine"},
-{"name":"Trialgle"},
-{"name":"Maracas"},
-{"name":"Organ"},
-{"name":"Electric piano/ digital piano"},
-{"name":"Synthesizer"},
-{"name":"Piano"}
+{"name":"Bagpipes"}
 ]
