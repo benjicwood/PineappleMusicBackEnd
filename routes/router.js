@@ -43,22 +43,15 @@ router.get('/profile/:type/:id', function (req, res) {
 });
 // GET for heaven connections - my heaven or my hell
 // and their heaven connections
-router.get('/connection/:type/:id', function (req, res) {
-  let type = req.params.type;
+router.get('/connection/:connectiontype/:usertype/:id', function (req, res) {
+  let connectionType = req.params.connectiontype;
+  let userType = req.params.usertype;
   let id = req.params.id;
-  if (type === 'heaven' || type === 'hell') {
-    retrieve.myHeavenOrHell(type, id, function (error, data) {
-      if (error) res.status(500).send(error);
-      res.send(data);
-    });
-  } else if (type === 'theirheaven') {
-    retrieve.theirHeaven(id, function (error, data) {
-      if (error) res.status(500).send(error);
-      res.send(data);
-    });
-  } else {
-    res.status(500).send({error: 'Invalid :type parameter'});
-  }
+  retrieve.connection(connectionType, userType, id, function (error, data) {
+    console.log(data);
+    if (error) res.status(500).send(error);
+    res.send(data);
+  });
 });
 
 // /////////////// POST ROUTES //////////////////////

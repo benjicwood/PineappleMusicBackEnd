@@ -1,3 +1,4 @@
+const async = require('async');
 const models = require('../models/models.js');
 
 const genres = function (callback) {
@@ -43,18 +44,76 @@ const musicianProfile = function (query, callback) {
   });
 };
 
-const myHeavenOrHell = function (type, id, callback) {
-  models.Connection.find({'type': type, 'source_id': id}, function (error, docs) {
-    if (error) return callback(error);
-    callback(null, docs);
-  });
-};
-
-const theirHeaven = function (id, callback) {
-  models.Connection.find({'type': 'heaven', 'target_id': id}, function (error, docs) {
-    if (error) return callback(error);
-    callback(null, docs);
-  });
+const connection = function (connectionType, userType, id, callback) {
+  let arrProfile = [];
+  if (connectionType === 'heaven' || connectionType === 'hell') {
+    models.Connection.find({'type': connectionType, 'source_id': id}, function (error, arrConnections) {
+      if (error) return callback(error);
+      if (userType === 'band') {
+        async.each(arrConnections, function (obj, eachCallback) {
+          let musicianId = obj.target_id;
+          models.Musician.find({'_id': musicianId}, function (error, profile) {
+            if (error) return callback(error);
+            if (profile.length > 0) {
+              arrProfile.push(profile[0]);
+            }
+            eachCallback(null, arrProfile);
+          });
+        }, function (err) {
+          if (err) throw err;
+          callback(null, arrProfile);
+        });
+      } else if (userType === 'musician') {
+        async.each(arrConnections, function (obj, eachCallback) {
+          let bandId = obj.target_id;
+          models.Band.find({'_id': bandId}, function (error, profile) {
+            if (error) return callback(error);
+            if (profile.length > 0) {
+              arrProfile.push(profile[0]);
+            }
+            eachCallback(null, arrProfile);
+          });
+        }, function (err) {
+          if (err) throw err;
+          callback(null, arrProfile);
+        });
+      }
+    });
+  }
+  if (connectionType === 'theirheaven') {
+    models.Connection.find({'type': 'heaven', 'target_id': id}, function (error, arrConnections) {
+      if (error) return callback(error);
+      if (userType === 'band') {
+        async.each(arrConnections, function (obj, eachCallback) {
+          let musicianId = obj.source_id;
+          models.Musician.find({'_id': musicianId}, function (error, profile) {
+            if (error) return callback(error);
+            if (profile.length > 0) {
+              arrProfile.push(profile[0]);
+            }
+            eachCallback(null, arrProfile);
+          });
+        }, function (err) {
+          if (err) throw err;
+          callback(null, arrProfile);
+        });
+      } else if (userType === 'musician') {
+        async.each(arrConnections, function (obj, eachCallback) {
+          let bandId = obj.source_id;
+          models.Band.find({'_id': bandId}, function (error, profile) {
+            if (error) return callback(error);
+            if (profile.length > 0) {
+              arrProfile.push(profile[0]);
+            }
+            eachCallback(null, arrProfile);
+          });
+        }, function (err) {
+          if (err) throw err;
+          callback(null, arrProfile);
+        });
+      }
+    });
+  }
 };
 
 module.exports = {
@@ -63,6 +122,5 @@ module.exports = {
   matches: matches,
   bandProfile: bandProfile,
   musicianProfile: musicianProfile,
-  myHeavenOrHell: myHeavenOrHell,
-  theirHeaven: theirHeaven
+  connection: connection
 };
