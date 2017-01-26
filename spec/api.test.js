@@ -144,109 +144,109 @@ describe('API ROUTES', function () {
         });
     });
   });
-  describe('GET /connection/:type/:id', function () {
-    let objKeys = [
-      'type',
-      'source_id',
-      'target_id'
-    ];
-    it(':type "heaven" (myHeaven) should return status 200 and properties', (done) => {
-      let heavenSamples = (sampleIds.connection.filter(connection => {
-        return connection.type === 'heaven';
-      }));
-      let heavenSampleIds = heavenSamples[0].source_id;
-      request(ROOT)
-        .get(`/connection/heaven/${heavenSampleIds}`)
-        .expect('Content-Type', /json/)
-        .expect(200)
-        .end(function (err, res) {
-          if (err) throw err;
-          expect(res.statusCode).to.equal(200);
-          expect(heavenSamples[0].toObject()).to.contain.all.keys(objKeys);
-          expect(heavenSamples[0].type).to.equal('heaven');
-          expect(heavenSamples[0].source_id).to.not.equal(null);
-          expect(heavenSamples[0].target_id).to.not.equal(null);
-          done();
-        });
-    });
-    it(':type "hell" (myHell) should return status 200 and properties', (done) => {
-      let hellSamples = (sampleIds.connection.filter(connection => {
-        return connection.type === 'hell';
-      }));
-      let hellSampleIds = hellSamples[0].source_id;
-      request(ROOT)
-        .get(`/connection/hell/${hellSampleIds}`)
-        .expect('Content-Type', /json/)
-        .expect(200)
-        .end(function (err, res) {
-          if (err) throw err;
-          expect(res.statusCode).to.equal(200);
-          expect(hellSamples[0].toObject()).to.contain.all.keys(objKeys);
-          expect(hellSamples[0].type).to.eql('hell');
-          expect(hellSamples.source_id).to.not.equal(null);
-          expect(hellSamples.target_id).to.not.equal(null);
-          done();
-        });
-    });
-    it(':type "theirheaven" (theirHeaven) should return status 200 and properties', (done) => {
-      let theirHeavenSamples = (sampleIds.connection.filter(connection => {
-        return connection.type === 'heaven';
-      }));
-      let theirHeavenSampleIds = theirHeavenSamples[0].target_id;
-      request(ROOT)
-        .get(`/connection/theirheaven/${theirHeavenSampleIds}`)
-        .expect('Content-Type', /json/)
-        .expect(200)
-        .end(function (err, res) {
-          if (err) throw err;
-          expect(res.statusCode).to.equal(200);
-          expect(theirHeavenSamples[0].toObject()).to.contain.all.keys(objKeys);
-          expect(theirHeavenSamples[0].type).to.eql('heaven');
-          expect(theirHeavenSamples.source_id).to.not.equal(null);
-          expect(theirHeavenSamples.target_id).to.not.equal(null);
-          done();
-        });
-    });
-    it('returns an error when :type is not "heaven", "hell" or "theirheaven"', (done) => {
-      let heavenSamples = (sampleIds.connection.filter(connection => {
-        return connection.type === 'heaven';
-      }));
-      let heavenSampleIds = heavenSamples[0].source_id;
-      let hellSamples = (sampleIds.connection.filter(connection => {
-        return connection.type === 'hell';
-      }));
-      let hellSampleIds = hellSamples[0].source_id;
-      let theirHeavenSamples = (sampleIds.connection.filter(connection => {
-        return connection.type === 'heaven';
-      }));
-      let theirHeavenSampleIds = theirHeavenSamples[0].target_id;
-      request(ROOT)
-        .get(`/profile/blah/${heavenSampleIds}`)
-        .expect(500)
-        .end(function (err, res) {
-          if (err) throw err;
-          expect(res.statusCode).to.equal(500);
-          expect(res.body.error).to.equal('Invalid :type parameter');
-        });
-      request(ROOT)
-        .get(`/profile/blah/${hellSampleIds}`)
-        .expect(500)
-        .end(function (err, res) {
-          if (err) throw err;
-          expect(res.statusCode).to.equal(500);
-          expect(res.body.error).to.equal('Invalid :type parameter');
-        });
-      request(ROOT)
-        .get(`/profile/blah/${theirHeavenSampleIds}`)
-        .expect(500)
-        .end(function (err, res) {
-          if (err) throw err;
-          expect(res.statusCode).to.equal(500);
-          expect(res.body.error).to.equal('Invalid :type parameter');
-          done();
-        });
-    });
-  });
+  // describe('GET /connection/:type/:id', function () {
+  //   let objKeys = [
+  //     'type',
+  //     'source_id',
+  //     'target_id'
+  //   ];
+  //   it(':type "heaven" (myHeaven) should return status 200 and properties', (done) => {
+  //     let heavenSamples = (sampleIds.connection.filter(connection => {
+  //       return connection.type === 'heaven';
+  //     }));
+  //     let heavenSampleIds = heavenSamples[0].source_id;
+  //     request(ROOT)
+  //       .get(`/connection/heaven/${heavenSampleIds}`)
+  //       .expect('Content-Type', /json/)
+  //       .expect(200)
+  //       .end(function (err, res) {
+  //         if (err) throw err;
+  //         expect(res.statusCode).to.equal(200);
+  //         expect(heavenSamples[0].toObject()).to.contain.all.keys(objKeys);
+  //         expect(heavenSamples[0].type).to.equal('heaven');
+  //         expect(heavenSamples[0].source_id).to.not.equal(null);
+  //         expect(heavenSamples[0].target_id).to.not.equal(null);
+  //         done();
+  //       });
+  //   });
+  //   it(':type "hell" (myHell) should return status 200 and properties', (done) => {
+  //     let hellSamples = (sampleIds.connection.filter(connection => {
+  //       return connection.type === 'hell';
+  //     }));
+  //     let hellSampleIds = hellSamples[0].source_id;
+  //     request(ROOT)
+  //       .get(`/connection/hell/${hellSampleIds}`)
+  //       .expect('Content-Type', /json/)
+  //       .expect(200)
+  //       .end(function (err, res) {
+  //         if (err) throw err;
+  //         expect(res.statusCode).to.equal(200);
+  //         expect(hellSamples[0].toObject()).to.contain.all.keys(objKeys);
+  //         expect(hellSamples[0].type).to.eql('hell');
+  //         expect(hellSamples.source_id).to.not.equal(null);
+  //         expect(hellSamples.target_id).to.not.equal(null);
+  //         done();
+  //       });
+  //   });
+  //   it(':type "theirheaven" (theirHeaven) should return status 200 and properties', (done) => {
+  //     let theirHeavenSamples = (sampleIds.connection.filter(connection => {
+  //       return connection.type === 'heaven';
+  //     }));
+  //     let theirHeavenSampleIds = theirHeavenSamples[0].target_id;
+  //     request(ROOT)
+  //       .get(`/connection/theirheaven/${theirHeavenSampleIds}`)
+  //       .expect('Content-Type', /json/)
+  //       .expect(200)
+  //       .end(function (err, res) {
+  //         if (err) throw err;
+  //         expect(res.statusCode).to.equal(200);
+  //         expect(theirHeavenSamples[0].toObject()).to.contain.all.keys(objKeys);
+  //         expect(theirHeavenSamples[0].type).to.eql('heaven');
+  //         expect(theirHeavenSamples.source_id).to.not.equal(null);
+  //         expect(theirHeavenSamples.target_id).to.not.equal(null);
+  //         done();
+  //       });
+  //   });
+  //   it('returns an error when :type is not "heaven", "hell" or "theirheaven"', (done) => {
+  //     let heavenSamples = (sampleIds.connection.filter(connection => {
+  //       return connection.type === 'heaven';
+  //     }));
+  //     let heavenSampleIds = heavenSamples[0].source_id;
+  //     let hellSamples = (sampleIds.connection.filter(connection => {
+  //       return connection.type === 'hell';
+  //     }));
+  //     let hellSampleIds = hellSamples[0].source_id;
+  //     let theirHeavenSamples = (sampleIds.connection.filter(connection => {
+  //       return connection.type === 'heaven';
+  //     }));
+  //     let theirHeavenSampleIds = theirHeavenSamples[0].target_id;
+  //     request(ROOT)
+  //       .get(`/profile/blah/${heavenSampleIds}`)
+  //       .expect(500)
+  //       .end(function (err, res) {
+  //         if (err) throw err;
+  //         expect(res.statusCode).to.equal(500);
+  //         expect(res.body.error).to.equal('Invalid :type parameter');
+  //       });
+  //     request(ROOT)
+  //       .get(`/profile/blah/${hellSampleIds}`)
+  //       .expect(500)
+  //       .end(function (err, res) {
+  //         if (err) throw err;
+  //         expect(res.statusCode).to.equal(500);
+  //         expect(res.body.error).to.equal('Invalid :type parameter');
+  //       });
+  //     request(ROOT)
+  //       .get(`/profile/blah/${theirHeavenSampleIds}`)
+  //       .expect(500)
+  //       .end(function (err, res) {
+  //         if (err) throw err;
+  //         expect(res.statusCode).to.equal(500);
+  //         expect(res.body.error).to.equal('Invalid :type parameter');
+  //         done();
+  //       });
+  //   });
+  // });
   describe('POST /profile/:type', () => {
     let testBandProfile = {
       type: 'band',

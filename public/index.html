@@ -44,10 +44,11 @@
       </div>
       <div class='container'>
           <div class='content'>
-            <h3><strong>GET</strong><code>/api/connection/:type/:id</code></h3>
-            <h4><em>Get connections lists by ids</em></h4>
-            <h5 style="margin-left: 40px"><strong>:type</strong> is <em>heaven</em>, <em>hell</em> or <em>theirheaven </em></h5>
-            <h5 style="margin-left: 40px"><strong>:id</strong> is band or musician source_id</em></h5>
+            <h3><strong>GET</strong><code>/api/connection/:connectiontype/:usertype/:id</code></h3>
+            <h4><em>Get profile lists by id of current user</em></h4>
+            <h5 style="margin-left: 40px"><strong>:connectiontype</strong> is <em>heaven</em>, <em>hell</em> or <em>theirheaven </em></h5>
+            <h5 style="margin-left: 40px"><strong>:usertype</strong> is <em>band</em> or <em>musician </em></h5>
+            <h5 style="margin-left: 40px"><strong>:id</strong> is band or musician id</em></h5>
             <h5 style="margin-left: 50px"><em> - heaven -</em> lists heaven (favourites)</em></h5>
             <h5 style="margin-left: 50px"><em> - hell -</em> list hell (blocked)</em></h5>
             <h5 style="margin-left: 50px"><em> - theirheaven -</em> lists who favourited current user</em></h5>
@@ -56,7 +57,7 @@
       <div class='container'>
           <div class='content'>
             <h3><strong>POST</strong><code>/api/matches</code></h3>
-            <h4><em>(WORK IN PROGRESS)Post/Gets matches band matches by musician id</em></h4>
+            <h4><em>Post/Gets matches band matches by musician id</em></h4>
           </div>
       </div>
       <div class='container'>
