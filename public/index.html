@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pineapple API</title>
+    <style>
+      #preview code {color: #c1002e !important;}
+    </style>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.css'>
+  </head>
+  <body id='preview'>
+    <section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Pineapple Music App
+      </h1>
+      <h2 class="subtitle">
+        API Endpoints
+      </h2>
+    </div>
+  </div>
+</section>
+<div class='container'>
+  <div class='container'>
+      <div class='content'>
+        <h3><strong>GET</strong><code>/api/genre</code></h3>
+        <h4><em>Gets all the genres</em></h4>
+      </div>
+    </div>
+    <div class='container'>
+        <div class='content'>
+          <h3><strong>GET</strong><code>/api/instrument</code></h3>
+          <h4><em>Gets all the instruments</em></h4>
+        </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>GET</strong><code>/api/profile/:type/:id</code></h3>
+            <h4><em>Get band or musician profile by id</em></h4>
+            <h5 style="margin-left: 40px"><strong>:type</strong> is <em>band</em> or <em>musician</em></h5>
+            <h5 style="margin-left: 40px"><strong>:id</strong> is band or musician object id</em></h5>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>GET</strong><code>/api/connection/:connectiontype/:usertype/:id</code></h3>
+            <h4><em>Get profile lists by id of current user</em></h4>
+            <h5 style="margin-left: 40px"><strong>:connectiontype</strong> is <em>heaven</em>, <em>hell</em> or <em>theirheaven </em></h5>
+            <h5 style="margin-left: 40px"><strong>:usertype</strong> is <em>band</em> or <em>musician </em></h5>
+            <h5 style="margin-left: 40px"><strong>:id</strong> is band or musician id</em></h5>
+            <h5 style="margin-left: 50px"><em> - heaven -</em> lists heaven (favourites)</em></h5>
+            <h5 style="margin-left: 50px"><em> - hell -</em> list hell (blocked)</em></h5>
+            <h5 style="margin-left: 50px"><em> - theirheaven -</em> lists who favourited current user</em></h5>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/matches</code></h3>
+            <h4><em>Post/Gets matches band matches by musician id</em></h4>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/profile/:type</code></h3>
+            <h4><em>Create new band/musician profile</em></h4>
+            <h5 style="margin-left: 40px"><strong>:type</strong> is <em>band</em> or <em>musician</em></h5>
+          </div>
+      </div>
+      <div class='container'>
+          <div class='content'>
+            <h3><strong>POST</strong><code>/api/connection</code></h3>
+            <h4><em>Creates connection entry</em></h4>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+[{
+  "type": "musician",
+  "email": "jwashington0@spiegel.de",
+  "phone_number": "359-(883)541-3790",
+  "user_name": "Alien Jones",
+  "profile_pic": "https://c1.staticflickr.com/1/754/31693309384_94bb9eee05_b.jpg",
+  "join_date": "2/11/2016",
+  "location": {
+    "lat": "42.87472",
+    "long": "25.33417"
+  },
+  "instrument": "bagpipes",
+  "genre": "spookycore",
+  "last_seen": "10/13/2016"
+}, {
+  "type": "musician",
+  "email": "mphillips1@uiuc.edu",
+  "phone_number": "7-(474)148-6275",
+  "user_name": "benjicwood",
+  "profile_pic": "https://pbs.twimg.com/profile_images/1863661290/twitter.jpg",
+  "join_date": "2/22/2016",
+  "location": {
+    "lat": "55.93333",
+    "long": "37.83333"
+  },
+  "instrument": "bagpipes",
+  "genre": "spookycore",
+  "last_seen": "8/2/2016"
+}, {
+  "type": "musician",
+  "email": "jmatthews2@google.es",
+  "phone_number": "86-(637)477-7035",
+  "user_name": "tague slayer",
+  "profile_pic": "http://s1.favim.com/orig/24/dog-funny-tongue-Favim.com-219777.jpg",
+  "join_date": "2/15/2016",
+  "location": {
+    "lat": "30.18268",
+    "long": "110.16211"
+  },
+  "instrument": "electric guitar",
+  "genre": "folk",
+  "last_seen": "8/7/2016"
+}, {
+  "type": "musician",
+  "email": "lbrown3@paypal.com",
+  "phone_number": "358-(741)219-4288",
+  "user_name": "Tague Z",
+  "profile_pic": "https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/298857_10150355482410751_764378_n.jpg?oh=7e527f2ef3d4f04b93cd5a688060b3ac&oe=590FE85C",
+  "join_date": "8/21/2016",
+  "location": {
+    "lat": "61.21667",
+    "long": "22.08333"
+  },
+  "instrument": "conga",
+  "genre": "hip hop",
+  "last_seen": "2/29/2016"
+}, {
+  "type": "musician",
+  "email": "jjohnston4@columbia.edu",
+  "phone_number": "86-(598)706-7419",
+  "user_name": "dave",
+  "profile_pic": "http://www.jazzeddie.f2s.com/images/Clarinet/DanielSmithBassoon2.jpg",
+  "join_date": "7/12/2016",
+  "location": {
+    "lat": "30.45889",
+    "long": "119.10833"
+  },
+  "instrument": "bassoon",
+  "genre": "easy listening",
+  "last_seen": "8/5/2016"
+}, {
+  "type": "musician",
+  "email": "dbarnes5@marketwatch.com",
+  "phone_number": "57-(738)347-7664",
+  "user_name": "slowpoke",
+  "profile_pic": "http://3.bp.blogspot.com/_56mtJUy17hI/TOgQ7_g_ZFI/AAAAAAAAAko/4V2POeMjAbA/s1600/bach1.jpg",
+  "join_date": "2/28/2016",
+  "location": {
+    "lat": "5.40867",
+    "long": "-73.29572"
+  },
+  "instrument": "piano",
+  "genre": "carribean",
+  "last_seen": "9/21/2016"
+}, {
+  "type": "musician",
+  "email": "dday6@tinyurl.com",
+  "phone_number": "62-(298)962-7006",
+  "user_name": "madonna",
+  "profile_pic": "http://media.breitbart.com/media/2016/12/MadonnaTears-640x480.jpg",
+  "join_date": "11/11/2016",
+  "location": {
+    "lat": "-7.3216",
+    "long": "112.7787"
+  },
+  "instrument": "bass guitar",
+  "genre": "pop",
+  "last_seen": "4/17/2016"
+}, {
+  "type": "musician",
+  "email": "arodriguez7@merriam-webster.com",
+  "phone_number": "86-(118)299-2261",
+  "user_name": "david jones",
+  "profile_pic": "http://www.premierguitar.com/ext/resources/images/content/2016-01/FEAT/Obit---Bowie/DAVID-BOWIE--FEB-13-1974-TV-SHOW--AMSTERDAM--HOLLAND-_Photo-by-Laurens-Van-Houten-_-Frank-White-Photo-Agency-WEB.jpg",
+  "join_date": "5/30/2016",
+  "location": {
+    "lat": "26.78935",
+    "long": "102.99189"
+  },
+  "instrument": "electric guitar",
+  "genre": "avant garde",
+  "last_seen": "4/10/2016"
+}, {
+  "type": "musician",
+  "email": "dturner8@salon.com",
+  "phone_number": "86-(635)694-5571",
+  "user_name": "biebs",
+  "profile_pic": "http://gazettereview.com/wp-content/uploads/2016/04/justin-bieber-net-worth.jpg",
+  "join_date": "9/15/2016",
+  "location": {
+    "lat": "28.48833",
+    "long": "107.00806"
+  },
+  "instrument": "tuba",
+  "genre": "metal",
+  "last_seen": "1/7/2017"
+}, {
+  "type": "musician",
+  "email": "dlittle9@yandex.ru",
+  "phone_number": "44-(750)529-4763",
+  "user_name": "celinedion",
+  "profile_pic": "http://hookedoneverything.com/wp-content/uploads/2015/12/41.jpg",
+  "join_date": "5/27/2016",
+  "location": {
+    "lat": "54.4471",
+    "long": "-6.387"
+  },
+  "instrument": "drums",
+  "genre": "pop",
+  "last_seen": "8/18/2016"
+}, {
+  "type": "musician",
+  "email": "jcoxa@usgs.gov",
+  "phone_number": "86-(378)282-0815",
+  "user_name": "moveslikejagger",
+  "profile_pic": "http://mickjagger.wpengine.netdna-cdn.com/files/2013/10/mick071200x800.jpg",
+  "join_date": "12/11/2016",
+  "location": {
+    "lat": "33.47366",
+    "long": "112.54619"
+  },
+  "instrument": "accoustic guitar",
+  "genre": "rock",
+  "last_seen": "12/26/2016"
+}, {
+  "type": "musician",
+  "email": "wgordonb@mashable.com",
+  "phone_number": "86-(211)690-1844",
+  "user_name": "Beyonce",
+  "profile_pic": "http://www.fclefbasses.com/modules/MDGallery2/gallery2/main.php?g2_view=core.DownloadItem&g2_itemId=6478",
+  "join_date": "2/10/2016",
+  "location": {
+    "lat": "31.67382",
+    "long": "113.87032"
+  },
+  "instrument": "bass player",
+  "genre": "folk",
+  "last_seen": "6/13/2016"
+}, {
+  "type": "musician",
+  "email": "bowensc@craigslist.org",
+  "phone_number": "380-(688)989-6082",
+  "user_name": "drummerdarren",
+  "profile_pic": "https://robohash.org/nequenumquamlibero.jpg?size=50x50&set=set1",
+  "join_date": "12/3/2016",
+  "location": {
+    "lat": "52.04545",
+    "long": "33.94517"
+  },
+  "instrument": "triangle",
+  "genre": "carribean",
+  "last_seen": "5/21/2016"
+}, {
+  "type": "musician",
+  "email": "djacksond@blogs.com",
+  "phone_number": "62-(670)759-3711",
+  "user_name": "chinesetom",
+  "profile_pic": "https://robohash.org/sitdoloremsed.jpg?size=50x50&set=set1",
+  "join_date": "5/7/2016",
+  "location": {
+    "lat": "-6.7216",
+    "long": "111.1473"
+  },
+  "instrument": "keyboard",
+  "genre": "blues",
+  "last_seen": "12/23/2016"
+}, {
+  "type": "musician",
+  "email": "colsone@google.com.hk",
+  "phone_number": "86-(805)209-0834",
+  "user_name": "robbiexxx",
+  "profile_pic": "https://ksassets.timeincuk.net/wp/uploads/sites/55/2016/11/RobbieWilliams_GettyImages-491476872.jpg",
+  "join_date": "12/29/2016",
+  "location": {
+    "lat": "25.50808",
+    "long": "119.80722"
+  },
+  "instrument": "bagpipes",
+  "genre": "R&B & Soul",
+  "last_seen": "1/2/2017"
+}, {
+  "type": "musician",
+  "email": "rcookf@topsy.com",
+  "phone_number": "98-(323)905-8108",
+  "user_name": "gaga",
+  "profile_pic": "https://i.ytimg.com/vi/hwbGLeAf-D0/maxresdefault.jpg",
+  "join_date": "4/11/2016",
+  "location": {
+    "lat": "34.1885",
+    "long": "48.377"
+  },
+  "instrument": "cello",
+  "genre": "pop",
+  "last_seen": "10/12/2016"
+}, {
+  "type": "musician",
+  "email": "lpierceg@tuttocitta.it",
+  "phone_number": "63-(979)428-6963",
+  "user_name": "kwest",
+  "profile_pic": "http://rapdose.com/wp-content/uploads/2016/10/kanye-west.jpg",
+  "join_date": "7/2/2016",
+  "location": {
+    "lat": "8.0555",
+    "long": "123.7904"
+  },
+  "instrument": "vocals",
+  "genre": "hip hop",
+  "last_seen": "5/14/2016"
+}, {
+  "type": "musician",
+  "email": "chillh@patch.com",
+  "phone_number": "264-(253)616-2848",
+  "user_name": "cobain",
+  "profile_pic": "http://img.wennermedia.com/article-leads-horizontal-1400/rs-215166-GettyImages-2225160.jpg",
+  "join_date": "1/7/2017",
+  "location": {
+    "lat": "-17.88333",
+    "long": "15.06667"
+  },
+  "instrument": "electric guitar",
+  "genre": "rock",
+  "last_seen": "4/1/2016"
+}, {
+  "type": "musician",
+  "email": "vnguyeni@gov.uk",
+  "phone_number": "84-(671)402-2167",
+  "user_name": "moltobonno",
+  "profile_pic": "https://peopledotcom.files.wordpress.com/2016/08/bono-435-10.jpg?w=435",
+  "join_date": "9/12/2016",
+  "location": {
+    "lat": "14.81355",
+    "long": "108.95931"
+  },
+  "instrument": "violin",
+  "genre": "pop",
+  "last_seen": "12/22/2016"
+}, {
+  "type": "musician",
+  "email": "cjonesj@canalblog.com",
+  "phone_number": "62-(227)306-1281",
+  "user_name": "yokoono",
+  "profile_pic": "https://i.ytimg.com/vi/8NUvIhdMM_Y/maxresdefault.jpg",
+  "join_date": "2/11/2016",
+  "location": {
+    "lat": "-9.8076",
+    "long": "123.9023"
+  },
+  "instrument": "piano",
+  "genre": "avant guarde",
+  "last_seen": "2/2/2016"
+}]
