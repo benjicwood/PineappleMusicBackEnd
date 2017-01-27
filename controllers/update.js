@@ -1,7 +1,7 @@
 const models = require('../models/models.js');
 
 const musicianProfile = function (query, id, callback) {
-  mmodels.Musician.findOneAndUpdate({'_id': id}, query, {new: true}, function (error, docs) {
+  models.Musician.findOneAndUpdate({'_id': id}, query, {new: true}, function (error, docs) {
     if (error) return callback(error);
     callback(null, docs);
   });
